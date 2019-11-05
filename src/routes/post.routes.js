@@ -1,9 +1,18 @@
 const express = require('express')
 const MongoLib = require('../lib/mongodb')
 
+/**
+ * Router
+ */
 const router = express.Router()
 
-
+/**
+ * Get all post stored and send
+ * a http response with posts list
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ */
 const getAllPosts = async (req, res, next) =>{
     try{
         const posts = await MongoLib.getAllPosts()
@@ -14,6 +23,12 @@ const getAllPosts = async (req, res, next) =>{
     }
 }
 
+/**
+ * Add new project post
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ */
 const addPost = async (req, res, next) =>{
     try{
         const {name, units} = req.body
