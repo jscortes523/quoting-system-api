@@ -1,7 +1,4 @@
-# quoting-system-api
-
-## Goal
- Select 
+# Quoting System (Backend)
 
 ## Criteria
 - Server Side Performance
