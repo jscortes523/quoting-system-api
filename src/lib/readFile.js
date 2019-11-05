@@ -2,6 +2,12 @@ const fs = require('fs')
 const {switchRangeReadFile} = require('../utils/switchRange')
 const config = require('../config')
 
+/**
+ * Load Data from out.txt file 
+ * using readFile method of
+ * file system library
+ * @param {number} units 
+ */
 const loadDataFS = (units) => {
 
     const content = fs.readFileSync(config.dataPath,'utf8').toString()

@@ -1,5 +1,8 @@
 require('dotenv').config()
-
+/**
+ * Contain enviroment variables
+ * @returns {Object} 
+ */
 module.exports = {
     dataPath: './src/data/out.txt',
     port:process.env.PORT || 4040,

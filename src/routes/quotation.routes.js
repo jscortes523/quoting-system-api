@@ -1,10 +1,18 @@
 const express = require('express')
 const loadDataFS = require('../lib/readFile')
 const loadDataReadStream = require('../lib/readStream')
+const sendDataByChunks = require('../lib/test')
 const {switchRangeDB} = require('../utils/switchRange')
 const MongoLib = require('../lib/mongodb')
 const router = express.Router();
 
+/**
+ * Get quotations using fileRead and send a
+ * http response
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ */
 const getQuotationFileReader = async (req, res, next) => {
     
     try{
@@ -21,6 +29,13 @@ const getQuotationFileReader = async (req, res, next) => {
     }
 }
 
+/**
+ * Get quotations using database and send a
+ * http response
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ */
 const getQuotationFromDataBase = async (req, res, next) => {
     try{
         const {units} = req.params
@@ -51,6 +66,14 @@ const getQuotationFromDataBase = async (req, res, next) => {
         next(err)
     }
 }
+
+/**
+ * Get quotations using cache and send a
+ * http response
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ */
 
 const getQuotationFromDataBaseWithCache = async (req, res, next) => {
     try{
@@ -83,10 +106,18 @@ const getQuotationFromDataBaseWithCache = async (req, res, next) => {
     }
 }
 
+
 const getQuotationReadStreamWithCache = async (req, res,next) => {
     res.status(200).json({message:'Hello'})
 }
 
+/**
+ * Get quotations using stream and send a
+ * http response
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ */
 
 const getQuotationReadStream = async (req, res,next) => {
     try{
@@ -103,10 +134,19 @@ const getQuotationReadStream = async (req, res,next) => {
     }
 }
 
+const sendByChunk = async (req, res, next) => {
+    try {
+        sendDataByChunks(req,res)
+    } catch (error) {
+        next(error)
+    }
+}
+
 router
     .get('/filereader/:units',getQuotationFileReader)
     .get('/database/:units', getQuotationFromDataBase)
     .get('/dbcache/:units',getQuotationFromDataBaseWithCache)
     .get('/readstream/:units', getQuotationReadStream)
+    .get('/test/:units', sendByChunk)
 
 module.exports = router

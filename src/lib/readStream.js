@@ -3,6 +3,12 @@ const csv = require('csv-parser')
 const config = require('../config')
 const {switchRangeReadStream} = require('../utils/switchRange')
 
+/**
+ * Load Data from out.txt file 
+ * using Stream method of
+ * file system library
+ * @param {number} units 
+ */
 const loadDataReadStream =  (units) => {
     
     return new Promise( resolve => {

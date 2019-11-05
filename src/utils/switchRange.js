@@ -1,3 +1,7 @@
+/**
+ * Get range by unit
+ * @param {number} units 
+ */
 const switchRangeReadFile = (units) =>{
     
     let key;
@@ -19,6 +23,10 @@ const switchRangeReadFile = (units) =>{
     return key
 }
 
+/**
+ * Get range by unit
+ * @param {number} units 
+ */
 const switchRangeDB = (units) =>{
     
     let base;
@@ -40,6 +48,10 @@ const switchRangeDB = (units) =>{
     return base
 }
 
+/**
+ * Get range by unit
+ * @param {number} units 
+ */
 const switchRangeReadStream = (units) =>{
     
     let key;
