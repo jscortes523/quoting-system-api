@@ -16,6 +16,7 @@
      MongoDB
 
 
+
 ## Price Calculation Algorithm
 ### Steps
  1. Client enters a units number
@@ -40,6 +41,7 @@
 ## Data Process Strategy
 
 ## Strategy
+=======
 
 
 ### Using ReadFile of File System (FS)
@@ -72,6 +74,17 @@ Still, It depends on database response but I don't request information to the da
   - Memory Usage
   - Read File optimization (chunk) 
 
+## Run Project on Dev
+#### Install dependecies
+```
+npm install
+```
+
+#### Install dependecies
+```
+npm run start
+```
+Project run on port 6060
 
 ## Run Project on Dev
 #### Install dependecies
