@@ -5,7 +5,7 @@ const config = require('../config')
 /**
  * Load Data from out.txt file 
  * using readFile method of
- * file system library
+ * file system library and calculate average price per unit
  * @param {number} units 
  */
 const loadDataFS = (units) => {
