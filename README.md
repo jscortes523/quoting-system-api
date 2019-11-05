@@ -47,5 +47,16 @@ Still, It depends on database response but I don't request information to the da
   - Memory Usage
   - Read File optimization (chunk) 
 
+## Run Project on Dev
+#### Install dependecies
+```
+npm install
+```
+
+#### Install dependecies
+```
+npm run start
+```
+Project run port 6060
 
 
