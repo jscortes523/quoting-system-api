@@ -5,7 +5,7 @@ const config = require('../config')
 /**
  * Load Data from out.txt file 
  * using readFile method of
- * file system library
+ * file system library and calculate average price per unit
  * @param {number} units 
  */
 const loadDataFS = (units) => {
@@ -19,7 +19,7 @@ const loadDataFS = (units) => {
             const row = data.split(',')
 
             const info = switchRangeReadFile(units)
-            const cost = info.units/row[info.index]
+            const cost = row[info.index]/info.units
 
             result.push({
                 id:row[0],

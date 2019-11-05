@@ -31,7 +31,7 @@ const getQuotationFileReader = async (req, res, next) => {
 
 /**
  * Get quotations using database and send a
- * http response
+ * http response. Take input data to calculate average price per unit
  * @param {any} req 
  * @param {any} res 
  * @param {any} next 
@@ -46,7 +46,7 @@ const getQuotationFromDataBase = async (req, res, next) => {
         const result = data.map( elem => {
             const baseUnits = switchRangeDB(units)
             const range = elem.quotationRange.find(item => baseUnits === item.units)
-            const cost = range.units / range.cost
+            const cost = range.cost / range.units 
             return {
                 id:elem._id,
                 requestedUnits:units,
@@ -69,7 +69,7 @@ const getQuotationFromDataBase = async (req, res, next) => {
 
 /**
  * Get quotations using cache and send a
- * http response
+ * http response. Take input data to calculate average price per unit
  * @param {any} req 
  * @param {any} res 
  * @param {any} next 
@@ -85,7 +85,7 @@ const getQuotationFromDataBaseWithCache = async (req, res, next) => {
         const result = data.map( elem => {
             const baseUnits = switchRangeDB(units)
             const range = elem.quotationRange.find(item => baseUnits === item.units)
-            const cost = range.units / range.cost
+            const cost = range.cost / range.units 
             return {
                 id:elem._id,
                 requestedUnits:units,

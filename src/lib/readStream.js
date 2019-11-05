@@ -6,7 +6,7 @@ const {switchRangeReadStream} = require('../utils/switchRange')
 /**
  * Load Data from out.txt file 
  * using Stream method of
- * file system library
+ * file system library. Calculate price per unit using average
  * @param {number} units 
  */
 const loadDataReadStream =  (units) => {
@@ -17,7 +17,7 @@ const loadDataReadStream =  (units) => {
             .pipe(csv())
             .on('data', async data => {
                 const info = switchRangeReadStream(units)
-                const cost = info.units/ data[info.index]
+                const cost = data[info.index]/info.units
                 result.push({
                     id:data['id'],
                     requestedUnits:units,
