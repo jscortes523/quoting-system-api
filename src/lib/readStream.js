@@ -6,7 +6,7 @@ const {switchRangeReadStream} = require('../utils/switchRange')
 /**
  * Load Data from out.txt file 
  * using Stream method of
- * file system library
+ * file system library. Calculate price per unit using average
  * @param {number} units 
  */
 const loadDataReadStream =  (units) => {
