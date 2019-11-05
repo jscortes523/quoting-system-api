@@ -1,0 +1,37 @@
+{
+  "name": "quoting-system-api",
+  "version": "1.0.0",
+  "description": "Quoting system backend (business logic)",
+  "main": "src/index.js",
+  "scripts": {
+    "start:prod": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jscortes523/quoting-system-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jscortes523/quoting-system-api/issues"
+  },
+  "homepage": "https://github.com/jscortes523/quoting-system-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7",
+    "mongoose-lean-virtuals": "^0.5.0",
+    "node-cache": "^5.0.1"
+  },
+  "devDependencies": {
+    "csv-parser": "^2.3.1",
+    "eslint": "^6.6.0",
+    "eslint-config": "^0.3.0"
+  }
+}
