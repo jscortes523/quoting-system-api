@@ -31,7 +31,7 @@ const getQuotationFileReader = async (req, res, next) => {
 
 /**
  * Get quotations using database and send a
- * http response
+ * http response. Take input data to calculate average price per unit
  * @param {any} req 
  * @param {any} res 
  * @param {any} next 
@@ -69,7 +69,7 @@ const getQuotationFromDataBase = async (req, res, next) => {
 
 /**
  * Get quotations using cache and send a
- * http response
+ * http response. Take input data to calculate average price per unit
  * @param {any} req 
  * @param {any} res 
  * @param {any} next 
