@@ -19,7 +19,7 @@ const loadDataFS = (units) => {
             const row = data.split(',')
 
             const info = switchRangeReadFile(units)
-            const cost = info.units/row[info.index]
+            const cost = row[info.index]/info.units
 
             result.push({
                 id:row[0],

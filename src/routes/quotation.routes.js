@@ -46,7 +46,7 @@ const getQuotationFromDataBase = async (req, res, next) => {
         const result = data.map( elem => {
             const baseUnits = switchRangeDB(units)
             const range = elem.quotationRange.find(item => baseUnits === item.units)
-            const cost = range.units / range.cost
+            const cost = range.cost / range.units 
             return {
                 id:elem._id,
                 requestedUnits:units,
@@ -85,7 +85,7 @@ const getQuotationFromDataBaseWithCache = async (req, res, next) => {
         const result = data.map( elem => {
             const baseUnits = switchRangeDB(units)
             const range = elem.quotationRange.find(item => baseUnits === item.units)
-            const cost = range.units / range.cost
+            const cost = range.cost / range.units 
             return {
                 id:elem._id,
                 requestedUnits:units,

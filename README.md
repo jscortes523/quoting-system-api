@@ -41,7 +41,6 @@
 ## Data Process Strategy
 
 ## Strategy
-=======
 
 
 ### Using ReadFile of File System (FS)

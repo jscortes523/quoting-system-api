@@ -17,7 +17,7 @@ const loadDataReadStream =  (units) => {
             .pipe(csv())
             .on('data', async data => {
                 const info = switchRangeReadStream(units)
-                const cost = info.units/ data[info.index]
+                const cost = data[info.index]/info.units
                 result.push({
                     id:data['id'],
                     requestedUnits:units,
