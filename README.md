@@ -15,6 +15,7 @@
   ### Database
      MongoDB
 
+
 ## Price Calculation Algorithm
 ### Steps
  1. Client enters a units number
@@ -37,6 +38,9 @@
   ```
   
 ## Data Process Strategy
+
+## Strategy
+
 
 ### Using ReadFile of File System (FS)
 Node.js has a built-in file system library called **fs**, its method **readFile** load complete file to server memory, so we have to wait until the complete file is loaded to do any business logic on it. Bad memory usage.
@@ -67,6 +71,7 @@ Still, It depends on database response but I don't request information to the da
   - Performance
   - Memory Usage
   - Read File optimization (chunk) 
+
 
 ## Run Project on Dev
 #### Install dependecies
