@@ -41,8 +41,11 @@ Still, It depends on database response but I don't request information to the da
    function: getQuotationCachedData 
 ```
 
-
 # The Winner: Stream Reader
+### Why
+  - Performance
+  - Memory Usage
+  - Read File optimization (chunk) 
 
 
 
