@@ -57,6 +57,6 @@ npm install
 ```
 npm run start
 ```
-Project run port 6060
+Project run on port 6060
 
 
